@@ -79,17 +79,46 @@ Wiegers, K. (1999). Software Requirements Specification. Recuperado el 25 de Oct
 ## 2. Descripción general
 
 ### 2.1 Perspectiva del producto
+Este producto pretende crear una aplicación de "gig-economy" que permita a un mensajero llevar comida a los alumnos del ITAM a cualquier hora de clase. Se utilizaran las bases de datos existentes de los alumnos del ITAM.
 
 ### 2.2 Funcionalidad del producto
++ Inicio de sesión para alumnos del ITAM
++ Solicitar un pedido de RappiITAM
++ Agregar un método de pago
++ Consultar historial de pedidos
 
 ### 2.3 Clases de usuario y características
+Se deben de definir las siguientes clases:
+
+1. Alumno
+++ Nombre
+++ Clave Única
+++ Celular
+++ Correo electrónico
+++ Calificación promedio
+
+2. Repartidor
+++ Nombre
+++ Clave Única
+++ Celular
+++ Correo electrónico
+++ Calificación promedio
+
+3. Pedido
+++ Clave del pedido
+++ Precio total
+++ Hora estimada de entrega
+++ Descripción
 
 ### 2.4 Ambiente de operación
 El sistema actual es alojado en in servidor de Windows con un Microsoft SQL server para la base de datos por lo que reutilizaremos el equipo existente.
 
 ### 2.5 Limitaciones de diseño e implementación
+Debido a que no se tiene acceso al servidor en el que se va a montar la fase de pruebas, puede ser complicada realizar las pruebas del producto para su correcto funcionamiento. Tampoco se tiene acceso a la base de datos de los alumnos por políticas de la institución.
+Solicitaremos ayuda al ITAM para verificar el funcionamiento de la aplicación con sus bases de datos y del mantenimiento futuro de la aplicación, aunque nosotros nos encargaremos del funcionamiento en mayor medida.
 
 ### 2.6 Documentación del usuario
+El usuario contará con un manual para pedir de forma correcta un RappiITAM y saber cómo funciona el proceso de entrega. También el usuario contará con un manual para saber cómo agregar un método de pago (efectivo, tarjeta de crédito, etc.)y otro manual para saber cómo consultar sus pedidos anteriores (historial).
 
 ### 2.7 Supuestos y dependencias
 El proyecto depende enteramente del funcionamiento de las bases de datos existentes y del correcto acoplamiento del servidor de bases de datos con la nueva aplicación.
@@ -104,7 +133,11 @@ El usuario se encuentra en la pantalla de log in en donde debería ingresar su c
 #### Interface 2
 El usuario se encuentra en el interface donde puede asignar una nueva contraseña. Primero debe mandar un correo a otra cuenta de correo electrónico en donde tendrá el link para asignar una nueva contraseña. Una vez hecho esto el usuario deberá crear una nueva contraseña con las características que se requieran y cuando esto se cumpla el sistema cambiara la contraseña. El usuario será redirigido a la primera interfaz en donde podrá acceder con su nueva contraseña.
 #### Interface 3
+El usuario se encuentra en la pantalla donde podrá pedir un RappiITAM. La interfaz cuenta con un campo para seleccionar entre los distintos locales, tiendas y restaurantes de comida o bebidas aledaños al ITAM. Al seleccionar un restaurante, se despliega otro campo donde se podrá elegir productos del menú o que se vendan en dicho establecimiento. Después habrá un botón para confirmar el pedido y nos llevará a seleccionar un método de pago registrado. Si no hay ninguno, la aplicación nos redirige a la _Interface 4_ donde el usuario podrá registrar el método que desee. Si el usuario decide pagar con tarjeta, el sistema le solicitará el código de seguridad. Después de registrar el método de pago, el sistema buscará una persona disponible para llevar el pedido y se visulizará el tiempo estimado de entrega y precio final del pedido. Cuando se entregue el pedido, el sistema nos redirigirá a la _Interface 5_ donde aparecerá tu recibo y un campo para calificar a tu repartidor.
 #### Interface 4
+El usuario se encuentra en la pantalla para registrar algún método de pago con el que desee pagar su pedido de RappiITAM. La interfaz cuenta con un campo para seleccionar el método a registrar entre efectivo, tarjeta de crédito o tarjeta de débito. Si seleccionas efectivo, el sistema pedirá que elijas (de preferencia) con qué billete vas a relizar el pago de tu pedido. Si eliges alguna de las tarjetas, el sistema deplegará varios campos donde solicitará al usuario lo siguiente: nombre y apellido del titular, número, fecha de vencimiento y banco. Después de registrar el método de pago deseado, el sistema desplegará un botón para confirmar el registro del método de pago deseado.
+### Interface 5
+El usuario se encuentra en la pantalla donde podrá revisar su recibo del pedido que recibió y se visualizará un campo donde se le pida al usuario que califique a su repartidor y la experiencia que tuvo al comprar por la aplicación de RappiITAM. Aquí podrá darle desde 1 hasta 5 estrellas al repartidor (donde 1 es la calificación más baja y 5 la más alta). Después de otorgar una calificación, el sistema redirigirá al usuario a la _Interface 3_ donde podrá realizar otro pedido si así lo desea.
 
 ### 3.2 Hardware Interfaces
 #### Interface 1
@@ -113,26 +146,54 @@ El usuario se encuentra en el interface donde puede asignar una nueva contraseñ
 #### Interface 4
 
 ### 3.3 Software Interface
+Todos los interfaces tienen que tener una interconexión entre ellas al igual que una conexión con la base de datos. Como varios de los datos requeridos en una interface te dan acceso a otra interface, es necesario que exista una conexión entre todas. La base de datos igual debe de poder ser modificada ya que al realizar un pedido, el sistema registrará ese nuevo pedido y las calificaciones promedio de los usuarios y repartidores cambiarán constantemente. Esta conexión es escencial y hara que el sistema tengan un funcionamiento correcto.
 
 ### 3.4 Interfaz de Comunicación
+Los usuarios que ingresan a realizar un pedido de RappiITAM deben de tener un correo del ITAM. En el caso que no recuerden una contraseña se mandara un correo para recuperarla a un e-mail privado. De igual manera se contara con un network server communication en el caso de que se presente un error en el sistema el cual necesite de atenciones personales y/o profesionales. La seguridad con la que cuenta el sistema debe ser alta para que se pueda mantener privada y segura la información de los alumnos y no pueda ser atacada. Se hará uso de encriptados para que la información este fuera del alcance de otras personas.
 
 
 ## 4. Funcionalidades del Sistema
 
 ### 4.1 Entrar al sistema con correo y contraseña del usuario
 #### Descripción y prioridad
+Pantalla de login para el usuario de pedidos RappiITAM. En esta pantalla el usuario puede ingresar los datos necesarios para ingresar al sistema. Esta nueva funcionalidad tiene alta prioridad.
 #### Secuencias de respuesta
+•	Si el usuario inserta una combinación de nombre de usuario y contraseña correctos, se le redirigirá a los menús
+•	Si el usuario inserta una combinación de nombre de usuario y contraseña incorrectos, mostrar un mensaje acorde. Ej. "Usuario/Contraseña incorrectos"
+•	Si el usuario no recuerda su contraseña, hará clic una etiqueta que lo redirigirá a una pantalla de recuperación de usuario/contraseña
 #### Requerimientos funcionalidades
+1.	Los usuarios que cuentan con su correo del ITAM y su contraseña deben de poder entrar al sistema. 
+i. La pantalla de inicio cuenta con dos campos para ingresar texto (nombre de usuario y contraseña), un botón para validar los campos ingresados
+2.	La pantalla de inicio debe de contar con una etiqueta para redirigir a otra pantalla de recuperación de contraseña 
+i. La funcionalidad de esta pantalla de recuperación de contraseña todavía está en proceso
+3.	Cuando un usuario no cuenta con un nombre y contraseña correctos el sistema debe de mostrar un mensaje acorde, en donde se indique que el error es debido a que la combinación de correo y contraseña no fue correcta.
 
 ### 4.2 Pedir un RappiITAM
 #### Descripción y prioridad
+Esta funcionalidad permitirá que el usuario (alumno) pida un RappiITAM del establecimiento que desee. La prioridad de esto es muy alta.
 #### Secuencias de respuesta
++ Si el usuario intenta pedir un RappiTAM cuando ya tenga un pedido en camino, el sistema no le permitirá realizar el pedido indicando que no se permite realizar un pedido hasta que el pedido en proceso finalice.
++ Si el usuario intenta realizar un pedido con un monto mayor al crédito de su tarjeta (en caso de seleccionar alguna tarjeta), el sistema no permitirá solicitar el pedido.
 #### Requerimientos funcionalidades
+Req-1: Pantalla de selección de restaurante o tienda 
+Req-2: Pantalla de error 
+Req-3: Pantalla de búsqueda avanzada de productos
+Req-4 (opcional): Pantalla de solicitud de código de seguridad (en caso de realizar el pago con tarjeta)
+Req-4: Pantalla de visualización del pedido y precio final 
+Req-5: Pantalla de confrimación del pedido
+Req-6: Pantalla de tiempo estimado de entrega del pedido
 
 ### 4.3 Agregar un método de pago
 #### Descripción y prioridad
+Esta funcionalidad permitirá al usuario registrar algún método de pago. La prioridad de esta funcionalidad es muy alta.
 #### Secuencias de respuesta
++ Si el usuario intenta registrar una tarjeta que ya esté guardada, el sistema le enviará un mensaje de error indicando que ya se registró dicha tarjeta.
++ Si el usuario coloca algún dato incorrecto, como un número o la fecha de vencimiento, el sistema le enviará un mensaje de rror indicando que los datos registrados son incorrectos y que se deben de verificar.
 #### Requerimientos funcionalidades
+Req-1: Pantalla de selección de método (efectivo, tarjeta de crédito, tarjeta de débito)
+Req-2: Pantalla de registro de datos bancarios (en el caso de tarjetas)
+Req-3: Pantalla de error
+Req-4: Pantalla de confirmación de método de pago
 
 
 ## 5. Requerimientos No Funcionales
