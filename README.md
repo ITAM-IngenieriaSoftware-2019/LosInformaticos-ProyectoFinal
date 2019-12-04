@@ -290,6 +290,12 @@ En general se requiere que el servicio sea sencillo, fácil de manejar y desarro
 
 ## 8. Metodología
 
+Para la realización de este proyecto, elegimos la metodología _En Cascada_ por encima de las metodologías siguientes: Por Prototipos, Agile, Rapid, Dinámica, Espiral, Extreme Programming y Feauture Driven.
+
+La razón de esta elección es que nuestro proyecto no está pensado para poco tiempo y tenemos bien definido qué vamos a hacer y hacia dónde vamos. En nuestro proyecto vamos siguiendo un orden establecido y hasta no terminar con alguna fase continuamos con la siguiente. De esta manera nos aseguramos que nuestro proyecto este completo y tenga toda la funcionalidad adecuada para que no haya fallas al momento de lanzarla al mercado. 
+
+En primer lugar analizamos todos los requisitos que nos solicitaron. Después hicimos el diseño del programa y de nuestro sistema. Luego realizamos las pruebas pertinentes para asegurar el correcto funcionamiento del proyecto. Seguido de esto, verificamos todo el programa. Por último, realizaremos el mantenimiento del sistema (en caso de que hubiese fallas). De esta forma cualquier error que identifiquemos durante la etapa de desarrollo del proyecto, se identifica rápidamente y esto nos conduce a solucionarlo para poder continuar con los siguientes procesos.
+
 
 ## 9. Código del proyecto (Pantallas de la aplicación)
 
