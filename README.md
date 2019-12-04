@@ -43,6 +43,25 @@ Preparado por:
 5.	Reglas del Negocio
 
 ## 6. Plan de Calidad
+1. Test Plan Identifier 
+2. References 
+3. Introduction 
+4. Test Items 
+5. Software Risk Issues 
+6. Features to be Tested 
+7. Features not to be Tested 
+8. Approach 
+9. Item Pass/Fail Criteria 
+10. Suspension Criteria and Resumption Requirements 
+11. Test Deliverables 
+12. Remaining Test Tasks 
+13. Environmental Needs 
+14. Staffing and Training Needs 
+15. Responsibilities 
+16. Schedule 
+17. Planning Risks and Contingencies 
+18. Approvals 
+19. Glossary 
 
 ## 7. Arquitectura 
 
@@ -217,6 +236,44 @@ Cualquier alumno del ITAM puede solicitar el pedido de un RappiITAM sin importar
 
 
 ## 6. Plan de Calidad
+
+### 6.1 Test Plan Identifier 
+
+### 6.2 References 
+
+### 6.3 Introduction 
+
+### 6.4 Test Items 
+
+### 6.5 Software Risk Issues 
+
+### 6.6 Features to be Tested 
+
+### 6.7 Features not to be Tested 
+
+### 6.8 Approach 
+
+### 6.9 Item Pass/Fail Criteria 
+
+### 6.10 Suspension Criteria and Resumption Requirements 
+
+### 6.11 Test Deliverables 
+
+### 6.12 Remaining Test Tasks 
+
+### 6.13 Environmental Needs 
+
+### 6.14 Staffing and Training Needs 
+
+### 6.15 Responsibilities 
+
+### 6.16 Schedule 
+
+### 6.17 Planning Risks and Contingencies 
+
+### 6.18 Approvals 
+
+### 6.19 Glossary 
 
 
 ## 7. Arquitectura
