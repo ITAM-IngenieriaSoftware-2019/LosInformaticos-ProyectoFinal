@@ -60,6 +60,7 @@ Creado el 3 de Diciembre de 2019
 ## 1. Introducción
 
 ### 1.1 Propósito
+El propósito de este proyecto es crear un sistema que le permita a los alumnos del Instituto Tecnológico Autónomo de México (ITAM) realizar un pedido de un RappiITAM en algún momento donde no puedan salir a comprar algo de comer por distintas razones (proyectos, tareas, exámenes finales) y que el mismo repartidor sea otro alumno del ITAM que en ese instante tenga tiempo libre para comprar el pedido solicitado y llevarlo hasta el lugar donde se solicitó el pedido.
 
 ### 1.2 Convenciones del Documento
 Las prioridades elegidas para los requerimientos funcionales se eligieron de acuerdo a cómo se encuentran relacionadas unas con otras.
@@ -212,6 +213,7 @@ El usuario debe de acceder al sistema con su correo electrónico institucional o
 El enfoque de este sistema debe de ser el de alta disponibilidad en horas pico, pues el tráfico esta concentrado en un día cercano a exámenes finales donde la mayoría de los alumnos no pueden salir a comer por continuar estudiando para los exámenes.
 
 ### 5.5 Reglas del Negocio
+Cualquier alumno del ITAM puede solicitar el pedido de un RappiITAM sin importar su género, raza, religión, condición física, discapacidades o su posición social (si es becado o no). Lo anterior también aplica para los repartidores que tengan la posibilidad de aceptar y llevar los pedidos.
 
 
 ## 6. Plan de Calidad
