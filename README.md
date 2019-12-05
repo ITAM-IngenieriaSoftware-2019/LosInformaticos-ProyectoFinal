@@ -160,10 +160,8 @@ El usuario se encuentra en la pantalla para registrar algún método de pago con
 El usuario se encuentra en la pantalla donde podrá revisar su recibo del pedido que recibió y se visualizará un campo donde se le pida al usuario que califique a su repartidor y la experiencia que tuvo al comprar por la aplicación de RappiITAM. Aquí podrá darle desde 1 hasta 5 estrellas al repartidor (donde 1 es la calificación más baja y 5 la más alta). Después de otorgar una calificación, el sistema redirigirá al usuario a la _Interface 3_ donde podrá realizar otro pedido si así lo desea.
 
 ### 3.2 Hardware Interfaces
-#### Interface 1
-#### Interface 2
-#### Interface 3
-#### Interface 4
+
+No hay ninguna interacción especial entre la aplicación y el hardware, el comportamiento es el esperado a cualquier aplicación que funcione en pantallas _touch_.
 
 ### 3.3 Software Interface
 Todos los interfaces tienen que tener una interconexión entre ellas al igual que una conexión con la base de datos. Como varios de los datos requeridos en una interface te dan acceso a otra interface, es necesario que exista una conexión entre todas. La base de datos igual debe de poder ser modificada ya que al realizar un pedido, el sistema registrará ese nuevo pedido y las calificaciones promedio de los usuarios y repartidores cambiarán constantemente. Esta conexión es escencial y hara que el sistema tengan un funcionamiento correcto.
