@@ -234,47 +234,131 @@ El enfoque de este sistema debe de ser el de alta disponibilidad en horas pico, 
 ### 5.5 Reglas del Negocio
 Cualquier alumno del ITAM puede solicitar el pedido de un RappiITAM sin importar su género, raza, religión, condición física, discapacidades o su posición social (si es becado o no). Lo anterior también aplica para los repartidores que tengan la posibilidad de aceptar y llevar los pedidos.
 
+## 6. Plan de calidad
 
-## 6. Plan de Calidad
+### 6.1 Identificador del plan de pruebas
 
-### 6.1 Test Plan Identifier 
+Debido a que este es le primer plan de pruebas del proyecto no tenemos un identificador previo con el que continuar. El plan es maestro pues involucra la funcionalidad completa del proyecto. El identificador asociado a este documento es RappITAM-plandepruebas-maestro-001.
 
-### 6.2 References 
+Los responsables de este documento son:
 
-### 6.3 Introduction 
++ Andoni Wadgymar Iñiguez
++ Luciano Montes de Oca Villa
++ Emilio Alfonso Venancio Landeros
 
-### 6.4 Test Items 
+### 6.2 Referencias
 
-### 6.5 Software Risk Issues 
+Este documento hace referencia al documento Software Requirement Specification for RappITAM, en donde este documento está incluido.
 
-### 6.6 Features to be Tested 
+### 6.3 Introducción
 
-### 6.7 Features not to be Tested 
+El propósito de este plan es probar las funcionalidades básicas y fundamentales de la aplicación RappITAM. Después de realizar las pruebas correspondientes la aplicación estará lista para presentarse como MVP.
 
-### 6.8 Approach 
+### 6.4 Funciones a probar
 
-### 6.9 Item Pass/Fail Criteria 
+La versión que se probará es la 1.0. Para esta versión se debe de probar la autentificación del usuario con el registro en base de datos, registro de nuevas entradas en la base de datos (usuarios, pedidos, métodos de pago, tickets de aclaraciones), procesamiento de peticiones del cliente, la correcta entrega de las peticiones a los tenderos, y concluir los pedidos activos.
 
-### 6.10 Suspension Criteria and Resumption Requirements 
+### 6.5 Riesgos del software
 
-### 6.11 Test Deliverables 
+Pagos con tarjeta y otros medios electrónicos: Debido a que no queremos destinar gran parte del proceso de desarrollo a la autentificación y procesamiento de pagos con medios electrónicos utilizaremos servicios construidos y probados por terceros, esto genera el riesgo de fallas que quedan fuera del alcance del equipo que desarrolla y mantiene RappITAM
 
-### 6.12 Remaining Test Tasks 
+### 6.6 Funcionalidades que se probarán
 
-### 6.13 Environmental Needs 
+General:
 
-### 6.14 Staffing and Training Needs 
++ 🔴 Poder registrarme si soy un nuevo usuario
++ 🔴 Poder inicial sesión con mi correo y contraseña
++ 🟡 Poder recuperar mi cuenta si olvido mi contraseña
++ 🟢 Ver el historial de mis pedidos
++ 🔴 Añadir un nuevo método de pago (tendero: recibir pago)
++ 🟡 Ver la lista de los métodos de pago asociados a mi cuenta
++ 🟢 Eliminar un método de pago guardado
 
-### 6.15 Responsibilities 
+Específicos de comprador:
 
-### 6.16 Schedule 
++ 🟡 Poder buscar las opciones de productos que hay disponibles
++ 🔴 Generar un pedido de productos
++ 🔴 Tener un carrito para solicitar varios productos en un pedido
++ 🟡 Ver el estatus de mi pedido
++ 🟡 Ponerme en contacto con el tendero asignado
++ 🟡 Generar una reclamación del servicio recibido
++ 🟢 Asignar una calificación a los tenderos
++ 🔴 Cancelar un pedido
 
-### 6.17 Planning Risks and Contingencies 
+Específicos de tendero:
 
-### 6.18 Approvals 
++ 🟡 Contactar al usuario para hacer alguna aclaración de su pedido
++ 🔴 Recibir y posteriormente aceptar o rechazar pedidos
++ 🔴 Ver lista de productos solicitados en un pedido
++ 🟢 Asignar una calificación al comprador
 
-### 6.19 Glossary 
+### 6.7 Funcionalidades que no se probarán
 
+En generál no se hará ninguna prueba relacionada a la experiencia del usuario o el diseño de la aplicación debido a que se tienen funcionalidades con mayor relevancia para la funcionalidad principal de la aplicación pero esta tarea se deberá de realizar en pruebas futuras.
+
+### 6.8 Enfoque
+
+La aplicación deberá de probarse en el hardware que el usuario utilizará, esto son teléfonos celulares y tabletas iOS y Android.
+
+Las pruebas están enfocadas a generar un MVP y hay grupos de funcionalidades que deben de ser probadas en conjunto:
+
++ Iniciar sesión
+  + Nuevo usuario, entrar al sistema y recuperar contraseña
++ Generar un pedido
+  + Ver opciones de productos, agregar al carrito, introducir método de pago
++ Cumplir con un pedido
+  + Recibir pedido, ver lista de productos, dónde debe de entregarse el pedido
++ Concluir un pedido
+  + Calificar al tendero/comprador, hacer reclamaciones
+
+### 6.9 Criterios de éxito/fracaso
+
+Las pruebas con prioridad alta (🔴) deben de ser completadas sin errores, las pruebas con prioridad media (🟡) pueden tener defectos menores pero tener un porcentaje >90% de éxito, las pruebas con prioridad baja (🟢) pueden tener errores menores y deben de tener porcentaje de éxito >70%
+
+### 6.10 Criterios de suspensión y retoma de pruebas
+
+Las pruebas con prioridad alta no deben de abandonarse hasta considerarse exitosas, en caso de que no sean exitosas todas las pruebas de menor prioridad deben de ser abandonadas y retomadas cuando la prueba fallida pueda considerarse exitosa.
+
+### 6.11 Entregables de pruebas
+
+El único entregable para esta etapa de pruebas es este documento debido a que no existen pruebas anteriores o información de versiones pasadas.
+
+### 6.12 Pruebas futuras
+
+Cualquier prueba referente al diseño, distribución o identidad visual de la aplicación. También cualquier prueba de usabilidad con el usuario.
+
+### 6.13 Necesidades para pruebas
+
++ Hardware actualizado: Equipos vigentes y comunes iOS y Android, asi como equipo para conectarlos a los equipos de desarrollo
+
+### 6.14 Requerimientos de personal y entrenamiento
+
+Los encargados de gestionar las pruebas deben de aprender a hacer pruebas automatizadas en hardware para ambas plataformas
+
+### 6.15 Responsabilidades
+
+Todos los integrantes del equipo son responsables de realizar las pruebas de las funcionalidades que ellos tengan asignadas
+
+### 6.16 Plan de trabajo
+
++ Revisión de funcionalidades a entregar para el MVP
++ Desarrollo del plan maestro de pruebas
++ Pruebas de funcionalidades de prioridad alta
++ Pruebas de funcionalidades de prioridad media y baja
++ Verificación de pruebas realizadas y probar funcionalidades faltantes
+
+### 6.17 Riesgos y contingencias para las pruebas
+
+Los desarrolladores tienen rotación muy rápida por lo que puede que en algún momento se requiera contratar nuevo personal para realizar tareas de desarrollo, mantenimiento, operaciones o de pruebas para el software, por esta razón es especialmente importante la documentación del proyecto
+
+### 6.18 Aprobación
+
+Todos los integrantes del equipo deben de aprobar este documento
+
+### 6.19 Glosario
+
++ __MVP__: Minimum viable product
++ __Tendero__: Persona encargada de comprar los productos y entregarlos con el comprador
 
 ## 7. Arquitectura
 
