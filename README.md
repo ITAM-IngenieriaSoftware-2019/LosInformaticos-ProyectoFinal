@@ -383,6 +383,9 @@ En primer lugar analizamos todos los requisitos que nos solicitaron. Después hi
 
 ![Primera Pantalla](Screen%20Shot%202019-12-05%20at%207.19.58%20PM.png)
 ![Pantalla LogIn](Screen%20Shot%202019-12-05%20at%207.20.10%20PM.png)
+![Pantalla Nuevo Usuario](Screen%20Shot%202019-12-05%20at%207.21.14%20PM.png)
+![Pantalla Olvidar Contraseña](Screen%20Shot%202019-12-05%20at%207.21.03%20PM.png)
+![Pantalla Principal](Screen%20Shot%202019-12-05%20at%207.20.18%20PM.png)
 
 ## 10. Documentación para replicar
 
