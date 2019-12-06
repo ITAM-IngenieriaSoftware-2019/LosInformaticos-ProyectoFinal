@@ -92,7 +92,7 @@ Para las estimaciones, decidimos tomar como referencia las dificultades del vide
 ### 1.3 Audiencia prevista y sugerencias de lectura
 
 La audiencia que tenemos provista para la lectura de este documento son los desarrolladores y programadores de software. Para realizar una buena lectura del proyecto, es recomendable leer en el orden en cómo se van presentando cada una de las secciones. De igual manera, si el lector tuviese dudas con respecto a la comprensión de los contenidos del documento, puede visitar las referencias abajo citadas (sección 1.5).
-Finalmente, el documento se divide en las siguientes secciones: Introducción, Descripción General, Requisitos de Interfaz Externa, System Features, Otros Requisitos No Funcionales, Plan de Calidad, Arquitectura, Metodología, Código del royecto (Pantallas de la aplicación y Documentación para replicar.
+Finalmente, el documento se divide en las siguientes secciones: Introducción, Descripción General, Requisitos de Interfaz Externa, System Features, Otros Requisitos No Funcionales, Plan de Calidad, Arquitectura, Metodología, Código del proyecto (Pantallas de la aplicación y Documentación para replicar.
 
 ### 1.4 Alcance del producto
 
