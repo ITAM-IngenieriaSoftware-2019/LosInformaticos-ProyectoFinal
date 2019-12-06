@@ -388,6 +388,8 @@ En primer lugar analizamos todos los requisitos que nos solicitaron. Después hi
 ![Pantalla Principal](Screen%20Shot%202019-12-05%20at%207.20.18%20PM.png)
 ![Pantalla Pedido](Screen%20Shot%202019-12-05%20at%207.20.27%20PM.png)
 ![Pantalla Pedido2](Screen%20Shot%202019-12-05%20at%207.20.33%20PM.png)
+![Pantalla AjustesUsuario](Screen%20Shot%202019-12-05%20at%207.22.03%20PM.png)
+![Pantalla MetodosPago](Screen%20Shot%202019-12-05%20at%207.22.24%20PM.png)
 
 ## 10. Documentación para replicar
 
