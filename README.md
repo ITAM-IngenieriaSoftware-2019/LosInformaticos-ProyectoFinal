@@ -381,6 +381,8 @@ En primer lugar analizamos todos los requisitos que nos solicitaron. Después hi
 
 ## 9. Código del proyecto (Pantallas de la aplicación)
 
+![Primera Pantalla](Screen%20Shot%202019-12-05%20at%207.19.58%20PM.png)
+![Pantalla LogIn](Screen%20Shot%202019-12-05%20at%207.20.10%20PM.png)
 
 ## 10. Documentación para replicar
 
