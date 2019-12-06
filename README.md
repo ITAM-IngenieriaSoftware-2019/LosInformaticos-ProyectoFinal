@@ -425,6 +425,6 @@ Para poder hacer el prototipo de la aplicación utilizamos el programa Justinmin
 
 Fue bastante útil esta herramienta ya que pudimos darnos una idea de como nos gustaría que se viera y realizar cambios no es complicado. De igual forma se pueden agregar imágenes, usar templates ya establecidos, íconos y bastantes herramientas con las cuales cuenta el programa que ayudan a no complicarse la vida tratando de programarlo si no que solo deslizas y colocas las cosas como las quieres. 
 
-Definitivamente recomiendamos esta herramienta y esperamos, en un futuro, utilizarla para próximos proyectos. El hecho que se puedan agregar acciones y mecanicas da el sentimiento de que se está usando una aplicación de verdad y con las posibilidades de usar diferentes teléfonos y protótipos puedes mostrarle a los usuarios como es la aplicación.
+Definitivamente recomendamos esta herramienta y esperamos, en un futuro, utilizarla para próximos proyectos. El hecho que se puedan agregar acciones y mecanicas da el sentimiento de que se está usando una aplicación de verdad y con las posibilidades de usar diferentes teléfonos y protótipos puedes mostrarle a los usuarios como es la aplicación.
 
 
