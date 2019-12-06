@@ -393,3 +393,10 @@ En primer lugar analizamos todos los requisitos que nos solicitaron. Después hi
 
 ## 10. Documentación para replicar
 
+Para poder hacer el prototipo de la aplicación utilizamos el programa Justinmindes que, según la web, es una herramienta de creación para prototipos de aplicaciones web y móviles y estructuras de sitios web de alta fidelidad. Esta herramienta es de gran utilidad ya que no requiere de programación y sirve para dar una idea general de la forma como se vería la aplicación que futuramente se programará. 
+
+Fue bastante útil esta herramienta ya que pudimos darnos una idea de como nos gustaría que se viera y realizar cambios no es complicado. De igual forma se pueden agregar imágenes, usar templates ya establecidos, íconos y bastantes herramientas con las cuales cuenta el programa que ayudan a no complicarse la vida tratando de programarlo si no que solo deslizas y colocas las cosas como las quieres. 
+
+Definitivamente recomiendo esta herramienta y me veo en un futuro utilizándola para próximos proyectos. El hecho que se puedan agregar acciones y mecanicas le da el sentimiento de que se está usando una aplicación de verdad y con las posibilidades de usar diferentes teléfonos y protótipos puedes mostrarle a los usuarios como es tu aplicación.
+
+
